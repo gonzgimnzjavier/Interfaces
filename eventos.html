@@ -9,6 +9,8 @@
     
     <button onclick="listenerHTML()">evento HTML</button>
     <button id="listenerJS">eeventListener()desde Javascript</button><br>
+    <button id="addEventListenerJS">addEventListener() desde Javascript</button>
+    <button id="removeEventListenerJS">removeEventListener() desde Javascript</button>
 
     <script>
         //Metodo 1
@@ -39,7 +41,15 @@
             console.log("M3.1. click en el addEventListenerJS");
         }
         tituloAddEventListener.addEventListener("click", clickAddEventListener);
-        //probar a cambaiar arriba "click" por "mouseleave", "mouseover", "mouseenter", "mouseout"
+        //probar a cambaiar arriba "click" por "mouseleave","mouseenter", "mousemove"
+
+        //Manera 3.2: addEventListener con funcion dentro
+        const tituloAddEventListenerFuncionDeclarada = document.getElementById("addEventListnerJSFuncionDeclarada");
+        tituloAddEventListenerFuncionDeclarada.addEventListener("click", function(){
+            console.log("M3.2. click en el addEventListenerJS con funcion declarada");
+        });
+
+
 
 
     </script>
