@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    
+    <button onclick="listenerHTML()">evento HTML</button>
+    <button id="listenerJS">eeventListener()desde Javascript</button><br>
+
+    <script>
+        //Metodo 1
+        /*
+        PROBLEMA: Mezcla de HTML y JS
+        */
+        function listenerHTML(){
+            console.log("M1. click en el listener DOM");
+        }
+        //Metodo 2
+        /*
+        PROBLEMA: Tienes que declarar multiples funnciones de lo contrario si lo vuelve
+        Te limita a las propiedades que existan
+        */
+        function clickListener(){
+            console.log("M2. click en el listener desde JS");
+        }
+
+        const titulo2 = document.getElementById("listenerJS");
+        //OJO! la llamada función NO LLEVA "()" de lo contrario se ejecuta directamente
+        titulo2.onclick = clickListener;
+
+        ///////////////////////////addEventListener////////////////////////////////////
+
+        //Manera 3.1: addEventListener simple
+        const tituloAddEventListener = document.getElementById("addEventListner");
+        function clickAddEventListener(){
+            console.log("M3.1. click en el addEventListenerJS");
+        }
+        tituloAddEventListener.addEventListener("click", clickAddEventListener);
+        //probar a cambaiar arriba "click" por "mouseleave", "mouseover", "mouseenter", "mouseout"
+
+
+    </script>
+</body>
+</html>
