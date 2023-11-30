@@ -49,6 +49,21 @@
             console.log("M3.2. click en el addEventListenerJS con funcion declarada");
         });
 
+        //Manera 3.3: addEventListener con funcion arrow
+        const tituloAddEventListenerArrow = document.getElementById("addEventListnerJSArrow");
+        const clickAddEventListenerArrow = (e) => {
+            console.log("M3.3. click en el addEventListenerJS con funcion arrow");
+        }
+        tituloAddEventListenerArrow.addEventListener("click", clickAddEventListenerArrow);
+
+        //3.4 addEventListener con funcion arrow anonima
+        //Problema: al ser la funcion anonima no se puede quitar el evento
+        const addEventListenerArrowAnonima = document.getElementById("addEventListnerJSArrowAnonima");
+        tituloAddEventListenerArrowAnonima.addEventListener("click", ()=>{
+            console.log("M3.4. click en el addEventListenerJS con funcion arrow anonima");
+        });
+    
+
 
 
 
