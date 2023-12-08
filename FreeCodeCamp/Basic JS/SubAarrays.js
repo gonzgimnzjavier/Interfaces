@@ -1,0 +1,1 @@
+const myList = [["Cocaina", 5] ,["Pollas en vinegreta", 8] , ["Un kilo de sexo" , 5] , ["Vagina de vaca enlatada", 3] , ["Huevos de codorniz", 4]];
